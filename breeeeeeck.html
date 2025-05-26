@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>iswadzerftgyg</title>
+  <style>
+    button {
+      background: #000000;
+      color: #FFFFFF; 
+      position: absolute;
+      left: 50px;
+      top: 10px;
+    }
+
+    button:hover {
+      background: #c8aaff;
+    }
+
+    body {
+      background-color: #FFFFFF;
+    }
+
+    .break-mode {
+      background: linear-gradient(#724678, #452964, #160A1A);
+      color: #F8EFFC;
+
+  @keyframes shake {
+   0% { transform: translate(1px, 1px); }
+  10% { transform: translate(-1px, -2px); }
+  20% { transform: translate(-3px, 0px); }
+  30% { transform: translate(3px, 2px); }
+  40% { transform: translate(1px, -1px); }
+  50% { transform: translate(-1px, 2px); }
+  60% { transform: translate(-3px, 1px); }
+  70% { transform: translate(3px, 1px); }
+  80% { transform: translate(-1px, -1px); }
+  90% { transform: translate(1px, 2px); }
+  100% { transform: translate(1px, -2px); }
+}
+
+.shake-screen {
+  animation: shake 0.5s infinite;
+}
+   
+  </style>
+</head>
+<body>
+
+  <button id="crazyBt"> не жмэ на миня >:( </button>
+
+  <script>
+    let count = 0;
+
+    document.getElementById("crazyBt").onclick = function handleClick() {
+      count++;
+
+      if (count === 1) {
+        alert("ёёуу не жме");
+      } else if (count === 2) {
+        alert("АЛО ТЫ ЧО ТВАР");
+      } else if (count === 3) {
+        alert("ЩАС ТЕБЕ УШИ ЗАБОМБЛЮ");
+
+        document.body.classList.add("break-mode");
+
+        document.body.classList.add("shake-screen");
+
+        document.getElementById("crazyBt").textContent = "туда тебя";
+
+        let audio = new Audio("ehehehe.mp3");
+        audio.loop = true;
+        audio.play();
+      }
+    }
+  </script>
+
+</body>
+</html>
